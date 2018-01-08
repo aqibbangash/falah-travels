@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="zwolek" />
+    <meta name="description" content="Rocket admin framework built on Bootstrap 4 grid, jQuery, Pug (Jade) and Scss" />
+    <meta name="keywords" content="Admin, dashboard, bootstrap 4 admin, bootstrap 4, bootstrap, admin dashboard, responsive admin, responsive, admin pug" />
+    <link rel="icon" href="./static/img/logo.png" />
+    <title>Falah</title>
+    <!-- Core Styles-->
+<link href="./static/css/app.min.css" rel="stylesheet" />
+<link href="../static/css/app.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+  <body class="content content__authentication  ltr">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <div class="authentication--v2">
+            <div class="authentication__left">
+              <h3 class="authentication__title">Falah Admin!</h3>
+    <!--          <p class="authentication__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, suscipit.</p>-->
+            </div>
+            <div class="authentication__right">
+              <h5 class="authentication__title">Login</h5>
+              <p class="authentication__desc">
+                You don't have an account?
+                <a class="text--primary" href="#">Create your account</a>
+              </p>
+              <form id = "myForm" action = "/authenticate"  class="authentication__form"  method="post" data-toggle="validator" />
+                <div class="form__group has--feedback">
+                  <label class="form__label mb--0">Email</label>
+                  <div class="input__group--style">
+                    <input class="form__control--style" type="text" name="email" id="inputStyleUser" placeholder="Email" required="required" /><span class="control--animation"></span>
+                    <label class="label__control" for="inputStyleUser"></label><span class="input__group__addon"><i class="fa fa-user"></i></span>
+                  </div>
+                </div>
+                <div class="form__group has--feedback">
+                  <label class="form__label mb--0">Password</label>
+                  <div class="input__group--style">
+                    <input class="form__control--style" name="password" type="password" id="inputStylePassword" placeholder="Password" required="required" /><span class="control--animation"></span>
+                    <label class="label__control" for="inputStylePassword"></label><span class="input__group__addon"><i class="fa fa-key"></i></span>
+                  </div>
+                </div>
+                <div class="form__footer">
+                  <div class="form__group">
+                    <div class="form__check">
+                      <div class="checkbox checkbox--primary">
+                        <input class="check" type="checkbox" id="checkbox02" />
+                        <label for="checkbox02">Remember Me</label>
+                      </div>
+                    </div>
+                  </div><a class="text--primary" href="#">Forgot Password</a>
+                </div>
+                <div class="form__btn">
+                  <button class="btn btn--primary btn--round" type="submit">Login
+                  </button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Necessary Plugins-->
+    <script src="../js/app.min.js"></script>
+    <script src="../js/forms/validator.js"></script>
+  </body>
+
+</html>

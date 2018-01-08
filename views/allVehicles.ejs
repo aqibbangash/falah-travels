@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="author" content="zwolek" />
+    <meta name="description" content="Rocket admin framework built on Bootstrap 4 grid, jQuery, Pug (Jade) and Scss" />
+    <meta name="keywords" content="Admin, dashboard, bootstrap 4 admin, bootstrap 4, bootstrap, admin dashboard, responsive admin, responsive, admin pug" />
+
+    <link rel="icon" href="./static/img/logo.png" />
+      <title>Falah</title>
+    <!-- Core Styles-->
+    <link href="./static/css/app.min.css" rel="stylesheet" type="text/css" />
+      <link href="../static/css/app.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
+  <body class="content ltr">
+    <!-- ///// Header ///// -->
+    <div class="header header--fixed">
+      <!-- ///// Header Left ///// -->
+      <div class="header__left">
+        <div class="only--mobile">
+          <div class="hamburger hamburger--collapse hamburger--mobile">
+            <div class="hamburger__box">
+              <div class="hamburger__inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="header__brand"><a class="brand__link" href=""> <img class="brand__img" height="42" width="42" src="./static/img/logo.png" alt="" /><img class="brand__img--mobile" src="../img/logo-m.png" alt="" /><span class="brand__name">Falah</span></a></div>
+        <div class="only--mobile">
+          <button class="btn header__btn--toggler" type="button"><i class="fa fa-ellipsis-v"></i></button>
+        </div>
+      </div>
+      <!-- ///// Header Right /////-->
+      <div class="header__right header__toggle">
+        <div class="header__content">
+          <!-- ///// Hidden Search /////-->
+          <div class="header__search search--close">
+            <div class="search__group"><i class="search__icon fa fa-search"></i>
+              <input class="search__control form__control" type="text" placeholder="Search..." />
+              <button class="btn search__btn--close" type="button"><i class="fa fa-times"></i></button>
+            </div>
+          </div>
+          <!-- ///// Content Left /////-->
+          <div class="content__left">
+            <div class="hamburger hamburger--collapse is--active sidebar--toggle">
+              <div class="hamburger__box">
+                <div class="hamburger__inner"></div>
+              </div>
+            </div>
+            <button class="btn btn__screen" type="button"><i class="fa fa-arrows-alt"></i></button>
+          </div>
+          <!-- ///// Content Right /////-->
+          <ul class="nav content__right">
+            <li class="nav__item nav__item--desktop">
+              <button class="btn btn__search" type="button"><i class="fa fa-search"></i></button>
+            </li>
+            <li class="nav__item">
+              <div class="notifications dropdown"><a class="dropdown__toggle notifications__dropdown nav__link" href="#" data-toggle="dropdown"><i class="notifications__icon fa fa-bell"></i><span class="only--mobile">notifications</span><span class="status status--pulse"></span></a>
+                <div class="dropdown__menu notifications__menu">
+                  <div class="notifications__header"><span class="notifications__title">latest notifications</span>
+                    <button class="btn btn--mute" type="button"><i class="fa fa-bell-slash"></i></button>
+                  </div>
+                  <ul class="notifications__content">
+                    <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"> <span class="item__media"> <span class="notification__alert notification__alert--info"><i class="fa fa-info"></i></span></span><span class="item__content">
+                          <h6 class="item__title">Information</h6>
+                          <p class="item__desc">New product is available</p><span class="item__info">15 min ago</span></span>
+                        <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button></a></li>
+                        <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"><span class="item__media"><img class="item__img" src="../img/users/5.jpeg" alt="" /></span><span class="item__content">
+                              <h6 class="item__title">Cara Stevens</h6>
+                              <p class="item__desc">share your post: Lorem ipsum dolor sit amet.</p><span class="item__info">30 min ago</span></span></a>
+                          <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button>
+                        </li>
+                    <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"> <span class="item__media"> <span class="notification__alert notification__alert--warning"><i class="fa fa-warning"></i></span></span><span class="item__content">
+                          <h6 class="item__title">Warning</h6>
+                          <p class="item__desc">DDos attack</p><span class="item__info">1 hour ago</span></span>
+                        <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button></a></li>
+                        <li class="notifications__wrapper list__group__item"><a class="notifications__item" href="#"><span class="item__media"><img class="item__img" src="../img/users/14.jpeg" alt="" /></span><span class="item__content">
+                              <h6 class="item__title">Sakura Yamamoto</h6>
+                              <p class="item__desc">Follow your profile on twitter</p><span class="item__info">7 hours ago</span></span></a>
+                          <button class="btn notifications__btn--close" type="button"><i class="icon--close fa fa-times"></i></button>
+                        </li>
+                  </ul>
+                  <div class="notifications__footer"><a class="notifications__link" href="#">sea all notifications</a></div>
+                </div>
+              </div>
+            </li>
+            <li class="nav__item user dropdown nav__item--desktop"><a class="dropdown__toggle user__dropdown" href="#" data-toggle="dropdown"><img class="img-fluid user__img" src="../img/profile/profile-small.jpg" alt="" /></a>
+              <div class="dropdown__menu user__menu">
+                <div class="user__preview">
+                  <div class="user__top__content"><img class="img-fluid user__img" src="../img/profile/profile-big.jpg" alt="" /></div>
+                  <h6 class="user__title">Matthew Doe</h6><span class="user__desc">Front-End Developer</span>
+                </div><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-user"></i>profile</a><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-envelope"></i>inbox</a><a class="dropdown__item user__link" href="#"> <i class="user__icon fa fa-sign-out"></i>sign out</a>
+              </div>
+            </li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"><i class="user__icon fa fa-user"></i>profile</a></li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"><i class="user__icon fa fa-envelope"></i>inbox				</a></li>
+            <li class="nav__item nav__item--mobile"><a class="nav__link" href="#"> <i class="user__icon fa fa-sign-out"></i>sign out</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      <!-- ///// Sidebar Left /////-->
+      <div class="sidebar__left">
+        <div class="sidebar--bg"></div>
+        <nav class="sidebar__nav sidebar__scroll">
+          <ul class="sidebar__menu">
+            <li class="sidebar__header">navigation</li>
+            <li class="sidebar__item"><a class="active sidebar__link link--single" href="/dashboard"><i class="link__icon fa fa-home"></i><span class="link__name">home</span></a>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="/getAllVehicles"><i class="link__icon fa fa-sliders"></i><span class="link__name">All Vehicles</span></a>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="/getAllDriver"><i class="link__icon fa fa-sliders"></i><span class="link__name">All Drivers</span></a>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link" href="/addVehicle"><i class="link__icon fa fa-sliders"></i><span class="link__name">Add Vehicle</li>
+                        <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link" href="/addDriverView"><i class="link__icon fa fa-sliders"></i><span class="link__name">Add Driver</li>
+<li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="/vehicleIncomeExpense"><i class="link__icon fa fa-list"></i><span class="link__name">Vehicle Income/Expense</span></a>
+  <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="/driverIncomeExpense"><i class="link__icon fa fa-list"></i><span class="link__name">Driver Income/Expense</span></a>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="/viewAllIncome"><i class="link__icon fa fa-list"></i><span class="link__name">All Income</span></a>
+            </li>
+            <li class="sidebar__item sidebar__dropdown"><a class="sidebar__link dropdown--collapse" href="/incomeReportView"><i class="link__icon fa fa-list"></i><span class="link__name">Income/Expense Report</span></a>
+            </li>
+        </nav>
+      </div>
+      <div class="page__content">
+
+        <div class="template__editor">
+          <div class="sidebar__settings">
+            <h6 class="setting__title">Sidebar Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__sidebar--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__sidebar--info btn--info" type="button"></button>
+              <button class="btn btn__change change__sidebar--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__sidebar--success btn--success" type="button"></button>
+              <button class="btn btn__change change__sidebar--warning btn--warning" type="button"></button>
+            </div>
+          </div>
+          <div class="header__settings">
+            <h6 class="setting__title">Header Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__header--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__header--info btn--info" type="button"></button>
+              <button class="btn btn__change change__header--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__header--success btn--success" type="button"></button>
+              <button class="btn btn__change change__header--warning btn--warning" type="button"></button>
+              <button class="btn btn__change change__header--gradient btn--gradient" type="button"></button>
+            </div>
+          </div>
+          <div class="brand__settings">
+            <h6 class="setting__title">Brand Background Color</h6>
+            <div class="settings__content">
+              <button class="btn btn__change change__brand--danger btn--danger" type="button"></button>
+              <button class="btn btn__change change__brand--info btn--info" type="button"></button>
+              <button class="btn btn__change change__brand--primary btn--primary" type="button"></button>
+              <button class="btn btn__change change__brand--success btn--success" type="button"></button>
+              <button class="btn btn__change change__brand--warning btn--warning" type="button"></button>
+              <button class="btn btn__change change__brand--gradient btn--gradient" type="button"></button>
+            </div>
+          </div>
+          <button class="btn btn--primary btn--reset btn--example" type="button">Reset
+          </button>
+        </div>
+        <div class="row">
+
+        </div>
+        <div class="row">
+          <div class="col-xs col-sm-12 col-md-12 col-lg-12 col-xl-12 mt--4">
+            <div class="card">
+              <div class="card__heading">
+                <h6 class="card__title">All Vehicles</h6>
+
+              </div>
+              <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+              <div class="card__body">
+              <table class="table table--responsive table--bordered" id="myTable">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Registration#</th>
+                    <th>Model</th>
+                    <th>Power</th>
+                    <th>color</th>
+                    <th>owner</th>
+                  </tr>
+                </thead>
+
+                <% for( var i=0;i<vehicle.length;i++){ %>
+                        <tr >
+                          <td ><%= vehicle[i].name %></td>
+                          <td><%= vehicle[i].registration %></td>
+                          <td><%= vehicle[i].model %></td>
+                          <td><%= vehicle[i].power %></td>
+                          <td><%= vehicle[i].color %></td>
+                          <td><%= vehicle[i].ownerName %></td>
+                          <td><a href='/editVehicle/<%=vehicle[i]._id %>'><button display: inline-block;>Edit</button></td>
+                          <td><a href='/addIncomeView/<%=vehicle[i]._id %>'><button display: inline-block;>Add Income</button></td>
+                          <td><a href='/addExpense/<%=vehicle[i]._id %>'><button display: inline-block;>Add Expense</button></td>
+                        </tr>
+                      <% } %>
+
+                        </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Necessary Plugins-->
+    <script src="./static/js/app.min.js"></script>
+    <script src="./static/js/tables/jquery.dataTables.min.js"></script>
+    <script src="./static/js/tables/dataTables.responsive.js"></script>
+    <script>
+function myFunction() {
+  var input, filter, table, tr, td, i;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      if (td.innerHTML.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+    <script>
+      $(document).ready(function() {
+      	$('#table_example').DataTable({
+      		"ajax": '../json/datatable.txt',
+      		"dom": '<<"" <"dataTable_top left col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 pl--0"i<"clear">> <"dataTable_top right col-xs col-sm-12 col-md-6 col-lg-6 col-xl-6 pr--0"f<"clear">> >rt<"bottom"p<"clear">>',
+      		"oLanguage": { "sSearch": "Search" }
+      	});
+      });
+
+
+    </script>
+    <script>
+// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+
+
+    modal.style.display = "block";
+
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display='none'
+}
+
+// When the user clicks anywhere outside of the modal, close it
+
+
+function showRow(row,url)
+{
+var x=row.cells;
+document.getElementById("name").innerHTML = "Name : "+x[0].innerHTML;
+if(x[2].innerHTML == undefined || x[2].innerHTML == ""){
+document.getElementById("religion").innerHTML = "Religion : -----";
+}else{
+document.getElementById("religion").innerHTML = "Religion : "+x[2].innerHTML;
+}
+
+if(x[3].innerHTML == undefined || x[3].innerHTML == ""){
+  document.getElementById("gender").innerHTML = "Gender : -----";
+}else{
+document.getElementById("gender").innerHTML = "Gender : "+x[3].innerHTML;
+}
+
+if(x[4].innerHTML == undefined || x[4].innerHTML == ""){
+document.getElementById("dob").innerHTML = "DOB : -----";
+}else{
+document.getElementById("dob").innerHTML = "DOB : "+x[4].innerHTML;
+}
+
+if(x[5].innerHTML == undefined || x[5].innerHTML == ""){
+document.getElementById("complexion").innerHTML = "complexion : -----";
+}else{
+document.getElementById("complexion").innerHTML = "Complextion : "+x[5].innerHTML;
+}
+
+if(x[6].innerHTML == undefined || x[6].innerHTML == ""){
+document.getElementById("company").innerHTML = "Company : -----";
+}else{
+document.getElementById("company").innerHTML = "Company : "+x[6].innerHTML;
+}
+
+if(x[7].innerHTML == undefined || x[7].innerHTML == ""){
+document.getElementById("city").innerHTML = "City : -----";
+}else{
+document.getElementById("city").innerHTML = "City : "+x[7].innerHTML;
+}
+if(x[8].innerHTML == undefined || x[8].innerHTML == ""){
+document.getElementById("complete").innerHTML = "Compelte Profile : -----";
+}else{
+document.getElementById("complete").innerHTML = "Compelte Profile "+x[8].innerHTML+"%";
+}
+
+
+document.getElementById("imag").src = url;
+  modal.style.display = "block";
+}
+
+
+</script>
+    <script src="./static/js/template-editor.min.js"></script>
+    <script src="./static/js/custom.min.js"></script>
+  </body>
+</html>
